@@ -2,4 +2,7 @@
 The Quasorforge organizations personal portfolio
 
 
-##The initial setup was made with create-react-app and the basic packages were installed,namely; tailwind css and react router dom @v6
+## Initial setup
+The initial setup was made with create-react-app and the basic packages were installed,namely; tailwind css, react router dom @v6 and react-icons. assests folder containing images was added to the src forlder as well as component and pages folder.
+
+
