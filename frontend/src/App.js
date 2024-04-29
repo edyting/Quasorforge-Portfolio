@@ -1,22 +1,26 @@
-
+import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<Layout/>,
+    errorElement:<ErrorPage/>,
+    children:[
+      {index:true,element:<Home/>},
+      {path:"/about",element:<About/>}
+    ]
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-  
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router}>
+    
+    </RouterProvider>
   );
 }
 
